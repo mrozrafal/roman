@@ -1,7 +1,7 @@
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 import RomanConverter from "./RomanConverter";
-import toRoman from './toRoman.test';
+
 
 describe('RomanConverter', () => {
     afterEach(cleanup)
@@ -17,25 +17,7 @@ describe('RomanConverter', () => {
             getByText("Roman: none")
         }).not.toThrow();
     })
-    it('converts 1 to I', () => {
-        const { getByText, getByLabelText } = render(<RomanConverter />)
-        fireEvent.change(getByLabelText(/arabic/i),{target: {value: "1"}})
-        expect(() => {
-            getByText("Roman: I")
-        }).not.toThrow();
-    })
-    it('converts 5 to V', () => {
-        const { getByText, getByLabelText } = render(<RomanConverter />)
-        fireEvent.change(getByLabelText(/arabic/i),{target: {value: "5"}})
-        expect(() => {
-            getByText("Roman: V")
-        }).not.toThrow();
-    })
-    it('does not convert to any roman number 0', () => {
-        const { getByText, getByLabelText } = render(<RomanConverter />)
-        fireEvent.change(getByLabelText(/arabic/i),{target: {value: "0"}})
-        expect(() => {
-            getByText("Roman: none")
-        }).not.toThrow();
-    })
+   
+
+    
 });
