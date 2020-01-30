@@ -20,7 +20,7 @@ class RomanConverter extends React.Component {
             <div className="Container">
                 <div className="Converter">
 
-                    <h1>Type your number between 1 and 3999</h1>
+                    <h1>Type number from 1 to 3999</h1>
                     <div className="Converter__editor">
                         <label className="Label">Arabic: <input onChange={this.handleChange} type="number"></input></label>
                         <h1>Roman: {this.state.roman ? this.state.roman : "none"}</h1>
