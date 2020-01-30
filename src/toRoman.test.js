@@ -16,10 +16,10 @@ describe('toRoman()', () => {
     });
     
     it('does not convert to any roman number 0', () => {
-        expect(toRoman(0)).toEqual("Enter a number between 1 and 3999")
+        expect(toRoman(0)).toEqual("none")
     })
     it('does not convert to any roman number above 3999', () => {
-        expect(toRoman(0)).toEqual("Enter a number between 1 and 3999")
+        expect(toRoman(0)).toEqual("none")
     })
 });
 
