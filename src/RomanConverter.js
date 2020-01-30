@@ -17,6 +17,7 @@ class RomanConverter extends React.Component {
 
         return (
             <>
+            <h1>Type your number between 1 and 3999</h1>
             <label>Arabic: <input onChange={this.handleChange} type="number"></input></label>
             <h1>Roman: {this.state.roman ? this.state.roman : "none" }</h1>
         </>
